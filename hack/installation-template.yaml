@@ -27,8 +27,7 @@ spec:
 
   importDataMappings:
       namespace: test
-      chartValues:
-        testData: foobar
+      chartValuesSecretName: chart-values
 ...
 ---
 apiVersion: landscaper.gardener.cloud/v1alpha1
@@ -40,4 +39,13 @@ spec:
   secretRef:
     name: target-cluster-secret
     key: kubeconfig
+...
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: chart-values
+type: Opaque
+stringData:
+  testData: foobar
 ...

@@ -15,11 +15,15 @@ subinstallations:
         - name: targetCluster
           target: targetCluster
 
+      data:
+        - name: chartValues
+          secretRef:
+            name: {{ $root.imports.chartValuesSecretName }}
+
     importDataMappings:
       namespace: {{ $root.imports.namespace }}
       chartName: {{ $value.name }}
       chartRef: {{ $value.access.imageReference }}
-      chartValues: {{ $root.imports.chartValues | toYaml | nindent 8 }}
 
 {{- end}}
 {{- end }}
