@@ -1,0 +1,43 @@
+---
+apiVersion: landscaper.gardener.cloud/v1alpha1
+kind: Installation
+metadata:
+  name: subinstallations-example
+  annotations:
+    landscaper.gardener.cloud/operation: reconcile
+spec:
+  context: default
+
+  componentDescriptor:
+    ref:
+      repositoryContext:
+        type: ociRegistry
+        baseUrl: ${REPOSITORY_CONTEXT}
+      componentName: ${COMPONENT_NAME}
+      version: ${EFFECTIVE_VERSION}
+
+  blueprint:
+    ref:
+      resourceName: root-blueprint
+
+  imports:
+    targets:
+      - name: targetCluster
+        target: "target-cluster"
+
+  importDataMappings:
+      namespace: example
+      chartValues:
+        foo: bar
+...
+---
+apiVersion: landscaper.gardener.cloud/v1alpha1
+kind: Target
+metadata:
+  name: target-cluster
+spec:
+  type: landscaper.gardener.cloud/kubernetes-cluster
+  secretRef:
+    name: target-cluster-secret
+    key: kubeconfig
+...

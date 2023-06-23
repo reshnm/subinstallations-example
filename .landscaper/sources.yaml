@@ -1,0 +1,9 @@
+---
+name: github_com_reshnm_subinstallations-example
+type: git
+version: ${VERSION}
+access:
+  type: github
+  commit: ${COMMIT_SHA}
+  ref: refs/tags/${VERSION}
+  repoUrl: https://github.com/reshnm/subinstallations-example

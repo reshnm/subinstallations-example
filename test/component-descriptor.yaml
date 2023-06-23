@@ -1,0 +1,13 @@
+component:
+  componentReferences: []
+  name: github.com/reshnm/subinstallations-example
+  provider: internal
+  repositoryContexts:
+  - baseUrl: ghcr.io/reshnm/subinstallations-example
+    componentNameMapping: urlPath
+    type: ociRegistry
+  resources: []
+  sources: []
+  version: v0.1.0-dev-ce5248c4ae33c0fd393f9e925dfbca5eeae7d401
+meta:
+  schemaVersion: v2

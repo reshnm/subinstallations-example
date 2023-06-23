@@ -1,0 +1,33 @@
+imports:
+  namespace: test
+  chartValues:
+    foo: bar
+
+  targetCluster:
+    metadata:
+      name: test-cluster
+      namespace: default
+    spec:
+      type: landscaper.gardener.cloud/kubernetes-cluster
+      config:
+        kubeconfig: |
+          apiVersion: v1
+          kind: Config
+          clusters:
+            - name: test
+              cluster:
+                server: 'https://api.test.local'
+                certificate-authority-data: >-
+                  askadsklasoijasdlm
+          contexts:
+            - name: test
+              context:
+                cluster: test
+                user: testuser
+          current-context: test
+          users:
+            - name: testuser
+              user:
+                token: >-
+                  abcdefghij
+                
