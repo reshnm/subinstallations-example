@@ -19,7 +19,7 @@ input:
   compress: true
 ...
 ---
-type: helm.io/chart
+type: helm
 name: simple-chart
 version: 0.1.0
 relation: external

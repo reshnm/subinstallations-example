@@ -5,10 +5,10 @@ subinstallations:
 
   - apiVersion: landscaper.gardener.cloud/v1alpha1
     kind: InstallationTemplate
-    name: {{ .value.name }}
+    name: {{ $value.name }}
 
     blueprint:
-      ref: cd://resources/chart-blueprint
+      ref: cd://resources/charts-blueprint
 
     imports:
       targets:
@@ -17,8 +17,8 @@ subinstallations:
 
     importDataMappings:
       namespace: {{ $root.imports.namespace }}
-      chartName: {{ .value.name }}
-      chartRef: {{ .value.access.imageReference }}
+      chartName: {{ $value.name }}
+      chartRef: {{ $value.access.imageReference }}
       chartValues: {{ $root.imports.chartValues | toYaml | nindent 8 }}
 
 {{- end}}

@@ -26,9 +26,9 @@ spec:
         target: "target-cluster"
 
   importDataMappings:
-      namespace: example
+      namespace: test
       chartValues:
-        foo: bar
+        testData: foobar
 ...
 ---
 apiVersion: landscaper.gardener.cloud/v1alpha1

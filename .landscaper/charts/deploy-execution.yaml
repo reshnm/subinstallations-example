@@ -2,7 +2,9 @@ deployItems:
   - name: {{ .imports.chartName }}
     type: landscaper.gardener.cloud/helm
     target:
-      import: targetCluster
+      #import: targetCluster
+      name: {{ .imports.targetCluster.metadata.name }}
+      namespace: {{ .imports.targetCluster.metadata.namespace }}
     config:
       apiVersion: helm.deployer.landscaper.gardener.cloud/v1alpha1
       kind: ProviderConfiguration

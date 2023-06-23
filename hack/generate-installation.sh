@@ -2,8 +2,8 @@
 
 set -e
 
-COMPONENT_NAME="github.tools.sap/cloud-orchestration-demo/laas-co-demo"
-REPOSITORY_CONTEXT="o.ingress.ek-test.hubforplay.shoot.canary.k8s-hana.ondemand.com"
+COMPONENT_NAME="github.com/reshnm/subinstallations-example"
+REPOSITORY_CONTEXT="ghcr.io/reshnm/subinstallations-example"
 
 SCRIPT_PATH="$(dirname $0)"
 SOURCE_PATH="$(dirname $0)/.."
