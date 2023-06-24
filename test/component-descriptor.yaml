@@ -8,6 +8,6 @@ component:
     type: ociRegistry
   resources: []
   sources: []
-  version: v0.1.0-dev-974303db48136dfc806e5e98a7812218232e0ba3
+  version: v0.1.0-dev-c501593d626ba931389dd562056878deec8c3382
 meta:
   schemaVersion: v2

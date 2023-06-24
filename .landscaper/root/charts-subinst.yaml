@@ -16,11 +16,13 @@ subinstallations:
           target: targetCluster
 
       data:
+        - name: namespace
+          dataRef: namespace
+
         - name: chartValues
           dataRef: chartValues
 
     importDataMappings:
-      namespace: {{ $root.imports.namespace }}
       chartName: {{ $value.name }}
       chartRef: {{ $value.access.imageReference }}
 
