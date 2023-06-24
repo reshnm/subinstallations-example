@@ -12,11 +12,11 @@ imports:
     schema:
       type: string
 
-  - name: chartValuesSecretName
+  - name: chartValues
     required: true
     type: data
     schema:
-      type: string
+      type: object
 
 exports: []
 

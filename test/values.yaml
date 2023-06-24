@@ -1,6 +1,7 @@
 imports:
   namespace: test
-  chartValuesSecretName: chart-values
+  chartValues: 
+    testData: foobar
 
   targetCluster:
     metadata:

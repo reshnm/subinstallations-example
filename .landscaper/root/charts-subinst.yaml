@@ -17,8 +17,7 @@ subinstallations:
 
       data:
         - name: chartValues
-          secretRef:
-            name: {{ $root.imports.chartValuesSecretName }}
+          dataRef: chartValues
 
     importDataMappings:
       namespace: {{ $root.imports.namespace }}
